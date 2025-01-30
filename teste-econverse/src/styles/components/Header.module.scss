@@ -1,0 +1,142 @@
+@use "../variables" as v; // Importa as variáveis e usa o prefixo "v"
+
+.headerBar {
+    max-width: 1280px;
+    margin: 0 auto;
+    z-index: 10; // Mantém o Header acima de outros elementos
+}
+
+.headerShip {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 6px 0;
+    border-bottom: 1px solid v.$branco-linha;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    p {
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        line-height: 18px;
+        color: v.$cinza-claro;
+    }
+
+    span {
+        color: v.$roxo-1;
+        font-weight: 600;
+    }
+}
+
+.headerLogo {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid v.$branco-linha;
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    >div>div:nth-child(1) {
+        // Logo
+        display: block;
+        align-items: center;
+    }
+
+    >div>div:nth-child(2) {
+        // Input de busca
+        position: relative;
+
+        input {
+            width: 630px;
+            border: none;
+            height: 48px;
+            padding: 8px 12px;
+            background-color: v.$cor-input;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+
+            &::placeholder {
+                color: v.$cinza-claro;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            right: 24px;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    >div>div:nth-child(3) {
+        // Ícones
+        display: flex;
+        justify-content: flex-end;
+        gap: 32px;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.headerMenu {
+    padding: 10px 0;
+    box-shadow: 0px 8px 16px rgba(57, 48, 19, 0.12);
+    position: relative;
+    z-index: 10;
+
+    div {
+        max-width: 1140px;
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        flex: 1;
+    }
+
+    li {
+        font-size: 12px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: v.$cinza-claro;
+        cursor: pointer;
+        line-height: 18px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    li img {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
+
+    li:hover {
+        color: v.$roxo-1;
+        font-weight: 600;
+    }
+}
