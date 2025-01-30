@@ -2,12 +2,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./styles/global.scss"; // Importando estilos globais
 import Hero from "./components/Hero";
+import CategoryStore from "./components/CategoryStore";
 
 function App () {
   return (
     <div>
       <Header />
       <Hero />
+      <CategoryStore />
       <main className="container">
         <h2>Vitrine de Produtos</h2>
         <div className="product-grid">
