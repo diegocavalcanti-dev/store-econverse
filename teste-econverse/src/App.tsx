@@ -11,7 +11,7 @@ function App () {
       <Hero />
       <CategoryStore />
       <main className="container">
-        <h2>Vitrine de Produtos</h2>
+        <h2>Substituir aqui pela vitrina de produtos</h2>
         <div className="product-grid">
           {/* Produto exemplo, colocar componentes de produtos aqui */}
         </div>
